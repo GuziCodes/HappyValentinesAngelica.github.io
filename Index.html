@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Lovetest.css">
+    <title>Happy Valentine's Day</title>
+</head>
+<body onclick="createHeart(event)">
+    <div class="container">
+        <h1>Hello Angelicaa ❤️</h1>
+        <p>Happy Valentine's Day!</p>
+        <button class="heart-button" onclick="showMessage()">Click for a Surprise 💖</button>
+        <p id="hiddenMessage" class="hidden-message">  
+        </br>
+            Your hair flows like rivers, soft and free,
+            A cascade of beauty that captivates me.</br>
+            Each strand, a whisper, a gentle embrace,
+            Framing a soul full of warmth and grace. </br>
+        </br>
+            Your smile—oh, how it shines so bright,
+            Banishing shadows, flooding me with light.</br>
+            A simple curve, yet it reaches so deep,
+            Lifting my heart from sorrows I keep.</br>
+        </br>
+            Your presence—so soothing, so light and pure,
+            A remedy, a comfort, a love so sure.</br>
+            No matter how tired, how worn I may be,
+            One glance from you, and I finally breathe.</br>
+        </br>
+            Your beauty—unmatched, yet it’s not just your face,
+            But the kindness within, your effortless grace.</br>
+            Each moment with you, a sight to behold,
+            A story of wonder, forever retold.</br>
+        </br>
+            And oh, your humor, your quirks so divine,
+            The way that you laugh, the way you design.</br>
+            The oddest of jokes, the silliest things,
+            Yet somehow, my heart so endlessly sings.</br>
+        </br>
+            You are light, you are joy, you are love beyond view,
+            The world is much brighter just for having you.💕</p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('hiddenMessage').style.display = 'block';
+        }
+        
+        function createHeart(event) {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    document.body.appendChild(heart);
+
+    heart.style.left = `${event.clientX}px`;
+    heart.style.top = `${event.clientY}px`;
+
+    setTimeout(() => {
+        heart.remove();
+    }, 1000);
+}
+    </script>
+</body>
+</html>
